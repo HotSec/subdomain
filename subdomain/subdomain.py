@@ -7,7 +7,7 @@ Autor: zmf96
 Email: zmf96@qq.com
 Date: 2022-02-21 08:46:14
 LastEditors: zmf96
-LastEditTime: 2022-02-22 03:48:54
+LastEditTime: 2022-02-22 10:06:18
 FilePath: /subdomain/subdomain.py
 Description: 
 '''
@@ -183,7 +183,8 @@ class SubDomain:
             logger.info("启动")
             self.loop.run_until_complete(self.start_brute())
         finally:
-            self.loop.close()
+            # self.loop.close()
+            pass
 
 
 def main():
