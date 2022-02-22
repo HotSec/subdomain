@@ -7,7 +7,7 @@ Autor: zmf96
 Email: zmf96@qq.com
 Date: 2022-02-21 08:46:14
 LastEditors: zmf96
-LastEditTime: 2022-02-22 03:37:16
+LastEditTime: 2022-02-22 03:48:54
 FilePath: /subdomain/subdomain.py
 Description: 
 '''
@@ -21,7 +21,7 @@ import IPy
 import random
 import logging
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 BASEDIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -194,7 +194,7 @@ def main():
     parser.add_argument("-f", "--file", type=str,
                         help='指定字典文件', default='default.txt')
     parser.add_argument("-d", "--domain", type=str,
-                        help='目标域名',required=True)
+                        help='目标域名', required=True)
     parser.add_argument("-s", "--deep", type=int, help='域名深度,默认 1', default=1)
     args = parser.parse_args()
     params = {}

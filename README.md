@@ -4,7 +4,7 @@
  * @Email: zmf96@qq.com
  * @Date: 2022-02-21 08:41:27
  * @LastEditors: zmf96
- * @LastEditTime: 2022-02-22 03:31:53
+ * @LastEditTime: 2022-02-22 03:49:57
  * @FilePath: /README.md
  * @Description: 
 -->
@@ -14,6 +14,18 @@
 采用cname与黑名单ip的方式来处理泛解析.
 
 ## 安装
+
+python3.8.10 
+
+```bash
+git clone https://github.com/HotSec/subdomain
+cd subdomain
+pip3 install poetry
+poetry install
+poetry shell
+
+python subdomain/subdomain.py -h
+```
 ## usage
 
 ```bash
