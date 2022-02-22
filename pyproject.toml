@@ -1,14 +1,18 @@
 [tool.poetry]
 name = "subdomain"
-version = "0.1.0"
+version = "0.1.1"
 description = "这是一个使用异步协程的子域名爆破工具。"
 authors = ["zmf96 <zmf96@qq.com>"]
+readme = "README.md"
+homepage = "https://github.com/HotSec/subdomain"
+repository = "https://github.com/HotSec/subdomain"
 
 [tool.poetry.dependencies]
 python = "^3.8"
 aiodns = "^3.0.0"
 loguru = "^0.6.0"
 IPy = "^1.01"
+autopep8 = "^1.6.0"
 
 [tool.poetry.dev-dependencies]
 
