@@ -7,7 +7,7 @@ Autor: zmf96
 Email: zmf96@qq.com
 Date: 2022-02-21 08:46:14
 LastEditors: zmf96
-LastEditTime: 2022-02-22 10:06:18
+LastEditTime: 2022-02-22 03:48:54
 FilePath: /subdomain/subdomain.py
 Description: 
 '''
@@ -19,9 +19,8 @@ import aiodns
 import argparse
 import IPy
 import random
-import logging
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 BASEDIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -59,9 +58,8 @@ class SubDomain:
             初始化 黑名单 随机不存在域名 判断泛解析
             :return:
             '''
-        tasks = [asyncio.ensure_future(self.check_black())
-                 for _ in range(200)]
-        self.loop.run_until_complete(asyncio.wait(tasks))
+        for _ in range(200):
+            self.loop.create_task(self.check_black())
 
     async def check_black(self):
         subd = ''.join(random.sample(
@@ -178,10 +176,15 @@ class SubDomain:
         return False
 
     def run(self):
-        self.init_bk()
+        try:
+            self.init_bk()
+        except Exception as e:
+            logger.warning(e)
         try:
             logger.info("启动")
             self.loop.run_until_complete(self.start_brute())
+        except Exception as e:
+            logger.warning(e)
         finally:
             # self.loop.close()
             pass
@@ -209,7 +212,7 @@ def main():
     sd = SubDomain(paras=params)
     sd.run()
     print(sd.results)
-
+    sd.loop.close()
 
 if __name__ == '__main__':
     main()
