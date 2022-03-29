@@ -1,3 +1,7 @@
+dev
+test
+ops
+pre
 static
 dsl
 res
