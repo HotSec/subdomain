@@ -7,7 +7,7 @@ Autor: zmf96
 Email: zmf96@qq.com
 Date: 2022-02-21 11:06:17
 LastEditors: zmf96
-LastEditTime: 2022-03-30 03:04:30
+LastEditTime: 2022-03-30 18:32:44
 FilePath: /tests/test_subdomain.py
 Description: 
 '''
@@ -20,6 +20,6 @@ def test_version():
 
 def test_subdomain():
     sd = SubDomain({'deep': 1, 'domain': 'baidu.com',
-                   'dictname': 'default.txt'})
+                   'dictname': 'test.txt'})
     sd.run()
     print(sd.results)

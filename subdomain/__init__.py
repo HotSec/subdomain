@@ -7,13 +7,13 @@ Autor: zmf96
 Email: zmf96@qq.com
 Date: 2022-02-21 08:45:43
 LastEditors: zmf96
-LastEditTime: 2022-03-30 18:23:45
+LastEditTime: 2022-03-30 18:31:40
 FilePath: /subdomain/__init__.py
 Description:
 '''
 
 from cp_common.base import Plugin
-from subdomain import SubDomain
+from .subdomain import SubDomain
 
 __all__ = ["PluginClass", "SubDomain"]
 
