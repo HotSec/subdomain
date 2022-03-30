@@ -28,10 +28,10 @@ class PluginClass(Plugin):
     ]
     plugin_name = "pysubdomain"
     author = "example"
-    version = "0.1.0"
+    version = "0.1.4.6"
 
     def __init__(self, **kwargs):
-        super().__init__(kwargs)
+        super().__init__(**kwargs)
 
     def run(self):
         self.logger.info(self.kwargs)
