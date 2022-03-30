@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "subdomain"
-version = "0.1.4.2"
+version = "0.1.4.3"
 description = "这是一个使用异步协程的子域名爆破工具。"
 authors = ["zmf96 <zmf96@qq.com>"]
 readme = "README.md"
