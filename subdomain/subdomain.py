@@ -7,7 +7,7 @@ Autor: zmf96
 Email: zmf96@qq.com
 Date: 2022-02-21 08:46:14
 LastEditors: zmf96
-LastEditTime: 2022-03-29 23:57:50
+LastEditTime: 2022-03-30 18:10:21
 FilePath: /subdomain/subdomain.py
 Description: 
 '''
@@ -19,7 +19,7 @@ import aiodns
 import IPy
 import random
 
-__version__ = '0.1.4'
+__version__ = '0.1.4.2'
 
 BASEDIR = os.path.dirname(os.path.abspath(__file__))
 
