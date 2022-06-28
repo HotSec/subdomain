@@ -15,7 +15,7 @@ from subdomain.subdomain import SubDomain, __version__
 
 
 def test_version():
-    assert __version__ == "0.1.4.7"
+    assert __version__ == "0.1.4.8"
 
 
 def test_subdomain():

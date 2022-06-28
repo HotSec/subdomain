@@ -21,23 +21,22 @@ __all__ = ["PluginClass", "SubDomain"]
 
 class PluginClass(Plugin):
     usage = [
-        {
-            "name": "host_list",
-            "type": "List[str]",
-            "usage": '域名列表，eg: ["baidu.com","bing.com"]',
-        }
     ]
     plugin_name = "pysubdomain"
     author = "example"
-    version = "0.1.4.7"
+    version = "0.1.4.8"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
     def run(self):
         self.logger.info(self.kwargs)
-        for host in self.kwargs["host_list"]:
-            sd = SubDomain({"deep": 1, "domain": host, "dictname": "default.txt"})
+        domain_list = self.kwargs.get("hosts")
+        if isinstance(domain_list,str):
+            domain_list = domain_list.split(",")
+        self.logger.info(domain_list)
+        for domain in domain_list:
+            sd = SubDomain({"deep": 1, "domain": domain, "dictname": "default.txt"})
             sd.run()
             for dom, ips in sd.results.keys():
                 self.results.append({"domain": {"domain": dom, "ips": ips}})

@@ -20,7 +20,7 @@ import aiodns
 import IPy
 from loguru import logger
 
-__version__ = "0.1.4.7"
+__version__ = "0.1.4.8"
 
 BASEDIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -172,7 +172,7 @@ class SubDomain:
                 domain = line.strip().lower()
                 self.queue.put_nowait(domain)
         brute_tasks = [
-            self.loop.create_task(self.brute_domain()) for _ in range(40000)
+            self.loop.create_task(self.brute_domain()) for _ in range(10000)
         ]  # 启动10000个协程
         await self.queue.join()
         for task in brute_tasks:
