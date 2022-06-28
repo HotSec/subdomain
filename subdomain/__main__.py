@@ -21,7 +21,7 @@ from subdomain import SubDomain, __version__
 
 
 def main():
-    logger.debug("subdomain  version 0.1")
+    logger.debug("subdomain  version {}".format(__version__))
     parser = argparse.ArgumentParser(description="使用aiodns爆破子域名")
     parser.add_argument("-v", "--version", action="version", version=__version__)
     parser.add_argument("-f", "--file", type=str, help="指定字典文件", default="default.txt")

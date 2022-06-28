@@ -150,7 +150,7 @@ class SubDomain:
                         self.find_total += 1
                         # logger.info(f'{subdomain} {sub_ips}')
                         self.results[subdomain] = sub_ips
-                        logger.debug(
+                        logger.info(
                             "remain "
                             + str(self.scan_total)
                             + "  | Found "

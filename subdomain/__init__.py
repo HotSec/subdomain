@@ -38,6 +38,6 @@ class PluginClass(Plugin):
         for domain in domain_list:
             sd = SubDomain({"deep": 1, "domain": domain, "dictname": "default.txt"})
             sd.run()
-            for dom, ips in sd.results.keys():
+            for dom, ips in sd.results.items():
                 self.results.append({"domain": {"domain": dom, "ips": ips}})
             sd.loop.close()
