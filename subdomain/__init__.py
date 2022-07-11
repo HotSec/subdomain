@@ -24,7 +24,7 @@ class PluginClass(Plugin):
     ]
     plugin_name = "pysubdomain"
     author = "example"
-    version = "0.1.4.8"
+    version = "0.1.4.9"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
