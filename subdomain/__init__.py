@@ -14,9 +14,9 @@ Description:
 
 from cp_common.base import Plugin
 
-from .subdomain import SubDomain
+from .subdomain import SubDomain,Version
 
-__all__ = ["PluginClass", "SubDomain"]
+__all__ = ["PluginClass", "SubDomain","Version"]
 
 
 class PluginClass(Plugin):
@@ -24,7 +24,7 @@ class PluginClass(Plugin):
     ]
     plugin_name = "pysubdomain"
     author = "example"
-    version = "0.1.4.9"
+    version = "0.1.4.11"
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

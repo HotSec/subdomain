@@ -15,7 +15,11 @@
 
 ## 安装
 
-python3.8.10 
+ubuntu22.04 + Python3.10.4
+
+`pip install subdomain`
+
+或者通过源码安装
 
 ```bash
 git clone https://github.com/HotSec/subdomain
@@ -24,8 +28,9 @@ pip3 install poetry
 poetry install
 poetry shell
 
-python subdomain/subdomain.py -h
+python subdomain -h
 ```
+
 ## usage
 
 ```bash

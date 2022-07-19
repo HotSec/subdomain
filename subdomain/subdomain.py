@@ -20,7 +20,7 @@ import aiodns
 import IPy
 from loguru import logger
 
-__version__ = "0.1.4.9"
+Version = "0.1.4.11"
 
 BASEDIR = os.path.dirname(os.path.abspath(__file__))
 

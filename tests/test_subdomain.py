@@ -11,11 +11,11 @@ LastEditTime: 2022-03-30 18:32:44
 FilePath: /tests/test_subdomain.py
 Description: 
 """
-from subdomain.subdomain import SubDomain, __version__
+from subdomain.subdomain import SubDomain, Version
 
 
 def test_version():
-    assert __version__ == "0.1.4.9"
+    assert Version == "0.1.4.11"
 
 
 def test_subdomain():

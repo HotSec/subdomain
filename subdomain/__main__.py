@@ -17,13 +17,13 @@ import sys
 
 from loguru import logger
 
-from subdomain import SubDomain, __version__
+from subdomain import SubDomain,Version
 
 
 def main():
-    logger.debug("subdomain  version {}".format(__version__))
+    logger.debug("subdomain  version {}".format(Version))
     parser = argparse.ArgumentParser(description="使用aiodns爆破子域名")
-    parser.add_argument("-v", "--version", action="version", version=__version__)
+    parser.add_argument("-v", "--version", action="version", version=Version)
     parser.add_argument("-f", "--file", type=str, help="指定字典文件", default="default.txt")
     parser.add_argument("-d", "--domain", type=str, help="目标域名")
     parser.add_argument("-s", "--deep", type=int, help="域名深度,默认 1", default=1)
